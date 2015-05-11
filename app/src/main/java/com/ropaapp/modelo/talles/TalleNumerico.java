@@ -1,7 +1,7 @@
 package com.ropaapp.modelo.talles;
 
 /**
- * Created by Tomás on 05/05/2015.
+ * Talle expresado en numeros.
  */
 public enum TalleNumerico implements Talle { CERO, UNO, DOS, TRES, CUATRO, CINCO, SEIS, SIETE, OCHO,
     NUEVE, DIEZ, ONCE, DOCE, TRECE, CATORCE, QUINCE, DIECISEIS, DIECISIETE, DIECIOCHO, DIECINUEVE,
@@ -66,7 +66,7 @@ public enum TalleNumerico implements Talle { CERO, UNO, DOS, TRES, CUATRO, CINCO
         CUARENTA_Y_NUEVE.nombre = "49";
     }
 
-     @Override
+    @Override
     public String toString() {
          return nombre;
      }

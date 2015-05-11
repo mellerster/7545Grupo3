@@ -1,7 +1,7 @@
 package com.ropaapp.modelo.talles;
 
 /**
- * Created by Tomás on 05/05/2015.
+ * Representa al talle de una prenda.
  */
 public interface Talle {
 }

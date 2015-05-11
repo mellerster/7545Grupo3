@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="seleccionar_marca">Seleccione si lo desea una marca o un diseñador</string>
+    <string name="seleccionar_prenda">Seleccione la/s prendas que desea buscar</string>
+    <string name="remeras">Remeras</string>
+    <string name="chombas">Chombas</string>
+    <string name="camisas">Camisas</string>
+    <string name="sweaters">Sweaters</string>
+    <string name="buzos">Buzos</string>
+    <string name="camperas">Camperas</string>
+    <string name="pantalones">Pantalones</string>
+    <string name="vestidos">Vestidos</string>
+    <string name="polleras">Polleras</string>
+    <string name="seleccionar_genero">Seleccione el género</string>
+    <string name="ninio">Niño</string>
+    <string name="ninia">Niña</string>
+    <string name="bebe">Bebé</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="buscar">Buscar</string>
+</resources>

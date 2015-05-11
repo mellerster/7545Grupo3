@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Tomás on 05/05/2015.
+ * Representa una prenda de vestir de un local y contiene unformacion acerca del stock de la misma.
  */
 public abstract class Prenda {
 
