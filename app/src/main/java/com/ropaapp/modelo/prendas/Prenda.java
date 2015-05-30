@@ -1,28 +1,31 @@
 package com.ropaapp.modelo.prendas;
 
-import com.ropaapp.modelo.talles.Talle;
-
-import java.util.HashMap;
-import java.util.Map;
-
 /**
- * Representa una prenda de vestir de un local y contiene unformacion acerca del stock de la misma.
+ * Representa una prenda de vestir de un local.
  */
 public abstract class Prenda {
 
     private String nombre;
 
-    private Map<Talle, Integer> stockPorTalle = new HashMap<Talle, Integer>();
+    private String imagen;
 
-    public Map<Talle, Integer> getStockPorTalle() {
-        return stockPorTalle;
-    }
+    private double precio;
 
-    public Prenda(String nombre) {
+    public Prenda(String nombre, String imagen, double precio) {
         this.nombre = nombre;
+        this.imagen = imagen;
+        this.precio = precio;
     }
 
-    public void modificarStock(Talle talle, int cantidad) {
-        stockPorTalle.put(talle, stockPorTalle.get(talle) + cantidad);
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public double getPrecio() {
+        return precio;
     }
 }

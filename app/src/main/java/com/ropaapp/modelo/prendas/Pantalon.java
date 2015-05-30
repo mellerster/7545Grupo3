@@ -5,7 +5,8 @@ package com.ropaapp.modelo.prendas;
  */
 public class Pantalon extends Prenda {
 
-    public Pantalon(String nombre) {
-        super(nombre);
+    public Pantalon(String nombre, String imagen, double precio) {
+        super(nombre, imagen, precio);
     }
+
 }

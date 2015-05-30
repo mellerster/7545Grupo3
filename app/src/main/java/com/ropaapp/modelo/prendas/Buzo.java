@@ -5,7 +5,7 @@ package com.ropaapp.modelo.prendas;
  */
 public class Buzo extends Prenda {
 
-    public Buzo(String nombre) {
-        super(nombre);
+    public Buzo(String nombre, String imagen, double precio) {
+        super(nombre, imagen, precio);
     }
 }

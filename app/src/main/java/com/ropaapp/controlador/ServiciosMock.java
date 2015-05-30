@@ -1,6 +1,7 @@
 package com.ropaapp.controlador;
 
 import com.ropaapp.modelo.Marca;
+import com.ropaapp.modelo.prendas.Prenda;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,10 @@ import java.util.List;
 public class ServiciosMock {
 
     private static ServiciosMock instancia = null;
+
+    private List<Marca> marcas;
+
+    private List<Prenda> prendas;
 
     private ServiciosMock() {}
 
@@ -31,17 +36,26 @@ public class ServiciosMock {
      * alfabeticamente segun su nombre
      */
     public List<Marca> getMarcasTiendaVirtual() {
-        List<Marca> marcas = new ArrayList<Marca>();
+        if (marcas == null) {
+            crearMarcas();
+        }
+        return marcas;
+    }
+
+    private List<Marca> crearMarcas() {
+        marcas = new ArrayList<Marca>();
         marcas.add(new Marca("47 Street", "logo_street"));
         marcas.add(new Marca("John L Cook", "logo_cook"));
         marcas.add(new Marca("Lee", "logo_lee"));
         marcas.add(new Marca("Wanama", "logo_wanama"));
         marcas.add(new Marca("Wrangler", "logo_wrangler"));
+
         return marcas;
     }
 
     public String getNombreDrawableBannerPantallaInicial() {
         return "banner_pantalla_inicial";
     }
+
 
 }

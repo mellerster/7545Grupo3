@@ -5,7 +5,7 @@ package com.ropaapp.modelo.prendas;
  */
 public class Remera extends Prenda {
 
-    public Remera(String nombre) {
-        super(nombre);
+    public Remera(String nombre, String imagen, double precio) {
+        super(nombre, imagen, precio);
     }
 }

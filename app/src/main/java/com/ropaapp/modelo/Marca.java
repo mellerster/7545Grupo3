@@ -1,9 +1,14 @@
 package com.ropaapp.modelo;
 
+import android.util.Pair;
+
 import com.ropaapp.modelo.prendas.Prenda;
+import com.ropaapp.modelo.talles.Talle;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Representa a una marca tanto de la tienda virtual como propietaria de un local.
@@ -11,7 +16,7 @@ import java.util.List;
 public class Marca {
 
     private String nombre;
-    private List<Prenda> prendas = new ArrayList<Prenda>();
+    private List<Map<Pair<Prenda, Talle>, Integer>> prendas = new ArrayList<Map<Pair<Prenda, Talle>, Integer>>();
     private String logo;
 
     /**
@@ -32,8 +37,14 @@ public class Marca {
         return logo;
     }
 
-    public void agregarPrenda(Prenda prenda) {
-        prendas.add(prenda);
+    public List<Map<Pair<Prenda, Talle>, Integer>> getPrendas() {
+        return prendas;
+    }
+
+    public void agregarPrenda(Pair<Prenda, Talle> prenda, int stock) {
+        Map<Pair<Prenda, Talle>, Integer> mapa = new HashMap<Pair<Prenda, Talle>, Integer>();
+        mapa.put(prenda, stock);
+        prendas.add(mapa);
     }
 
 }

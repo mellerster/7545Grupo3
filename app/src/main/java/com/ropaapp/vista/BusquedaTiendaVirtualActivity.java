@@ -1,10 +1,12 @@
 package com.ropaapp.vista;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -29,6 +31,7 @@ public class BusquedaTiendaVirtualActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_busqueda_tienda_virtual);
         crearSpinnerMarcas();
+        crearBotonBuscar();
     }
 
     private void crearSpinnerMarcas() {
@@ -66,6 +69,19 @@ public class BusquedaTiendaVirtualActivity extends Activity {
             opcionesSpinner.add(marca.getNombre());
         }
         return opcionesSpinner;
+    }
+
+    private void crearBotonBuscar() {
+        Button botonBuscar = (Button) findViewById(R.id.buscar_boton);
+        botonBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent busquedaTiendaVirtualIntent =
+                        new Intent("com.ropaapp.vista.ResultadosTiendaVirtualActivity");
+                startActivity(busquedaTiendaVirtualIntent);
+                finish();
+            }
+        });
     }
 
 }
